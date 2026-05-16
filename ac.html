@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reliable Company – AC Repair &amp; Service in Bangalore</title>
+  <meta name="description" content="AC repair &amp; service in Bangalore by expert technicians. All brands covered. Book via WhatsApp instantly." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+  <!-- ===== NAVBAR ===== -->
+  <header id="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+
+        <button class="btn-back" onclick="history.back()" style="background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:4px;padding:8px 12px;margin-right:8px;color:#374151;font-weight:600;font-size:13px;border-radius:8px;transition:background 0.2s;" onmouseover="this.style.background='#f3f4f6'" onmouseout="this.style.background='none'">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back
+        </button>
+
+        <a href="index.html" class="navbar-logo" style="display:flex;align-items:center;">
+          <img src="./images/logo.png" alt="Reliable Company" class="logo-img" />
+          <span class="logo-name">Reliable Company</span>
+        </a>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="container">
+      <!-- Breadcrumb -->
+
+      <!-- Banner -->
+      <div class="hero-banner">
+        <div class="hero-img-wrap">
+          <img src="./images/image.webp" alt="Washing Machine Repair & Service in Bangalore" loading="eager"
+            onerror="this.style.display='none'" />
+          <div class="hero-overlay">
+            <h1 class="hero-title">AC Repair &amp; Service in Bangalore</h1>
+            <div class="hero-rating">
+              <div class="stars" id="hero-stars"></div>
+              <span class="rating-num">4.5</span>
+              <span class="rating-count">(2,013 reviews)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="cat-tabs scrollbar-hide" id="cat-tabs"></div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN ===== -->
+  <div id="main">
+    <div class="container">
+      <div class="main-layout">
+        <!-- Main Content -->
+        <div class="main-content space-y-6">
+          <!-- Service Packages -->
+          <div class="packages-section" id="packages-section">
+            <h2 id="cat-heading"></h2>
+            <div id="packages-list"></div>
+          </div>
+
+          <!-- Reviews -->
+          <section class="section-card" aria-labelledby="reviews-heading">
+            <div class="section-header">
+              <h2 class="section-title" id="reviews-heading">Customer Reviews</h2>
+            </div>
+            <div class="rating-summary">
+              <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                <span class="rating-big">4.5</span>
+                <div class="stars" id="reviews-stars"></div>
+                <span class="rating-count-label">2,013 reviews</span>
+              </div>
+              <div id="rating-bars"></div>
+            </div>
+            <div class="reviews-grid" id="reviews-grid"></div>
+          </section>
+
+          <!-- FAQ -->
+          <section class="section-card" aria-labelledby="faq-heading">
+            <div class="section-header">
+              <h2 class="section-title" id="faq-heading">Frequently Asked Questions</h2>
+            </div>
+            <div class="divide-y" id="faq-list"></div>
+          </section>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="./images/logo.png" alt="Reliable Company" class="footer-logo-img" />
+            <span class="footer-logo-name">Reliable Company</span>
+          </div>
+          <p class="footer-desc">Your trusted local home services partner in Bangalore, connecting homeowners with
+            verified professionals.</p>
+          <p class="footer-address">
+            <strong>SM Plaza,</strong> No. 18 2nd Cross SH Layout AMC Main Road,<br>
+            1st Cross Rd, near SSR Function Hall,<br>
+            POST KAVARASANDRA, RT Nagar, Shampura,<br>
+            Kaval Bairasandra, Bengaluru,<br>
+            Karnataka 560032
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col-title">Reliable Company</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; <span id="year"></span> Reliable Company. All rights reserved.</p>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BOOKING MODAL ===== -->
+  <div id="booking-modal" class="booking-modal" aria-hidden="true">
+    <div class="booking-backdrop" data-close="modal"></div>
+    <div class="booking-panel" role="dialog" aria-modal="true" aria-labelledby="booking-title">
+      <div class="booking-header">
+        <div>
+          <p class="booking-pretitle">When should the professional arrive?</p>
+          <h2 id="booking-title">Book your service</h2>
+          <p class="booking-subtitle" id="booking-service-name">Select a service to start</p>
+        </div>
+        <button type="button" class="booking-close" data-close="modal" aria-label="Close booking form">×</button>
+      </div>
+      <div class="booking-card">
+        <div class="booking-option-row" id="booking-mode-options">
+          <button type="button" class="booking-option active" data-mode="instant">
+            <strong>Instant</strong>
+            <span>In 30 mins (subject to availability)</span>
+          </button>
+          <button type="button" class="booking-option" data-mode="schedule">
+            <strong>Schedule for later</strong>
+            <span>Select your preferred day & time</span>
+          </button>
+        </div>
+        <div class="booking-section">
+          <p class="booking-label">Select date</p>
+          <div class="booking-pill-group" id="booking-date-list"></div>
+        </div>
+        <div class="booking-section">
+          <p class="booking-label">Select start time of service</p>
+          <div class="booking-pill-group" id="booking-time-list"></div>
+        </div>
+        <div class="booking-section">
+          <p class="booking-label">Describe the issue</p>
+          <textarea id="booking-issue" class="booking-textarea" placeholder="e.g. AC not cooling"></textarea>
+        </div>
+        <button type="button" id="booking-submit" class="btn-whatsapp-action">Continue to WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ===== DATA =====
+    const serviceCategories = [
+      {
+        id: 'washing-machine-repairs', label: 'Repair & Service',
+        image: './images/repair.webp',
+        packages: [
+          { id: 'auto-top-load-checkup', name: 'AC Check-up', price: 266, rating: 4.5, reviewCount: 183, duration: 60, image: `./images/1st-img.webp`, includes: ['Accurate AC issue diagnosis before any repair.', 'Visitation fee will be adjusted in the final repair quote.'] },
+          { id: 'auto-front-load-checkup', name: 'AC Lite Service', price: 599, rating: 4.6, reviewCount: 188, duration: 60, image: `./images/2nd-img.webp`, includes: ['Quick AC clean for smooth cooling', 'Perfect for regular maintenance.'] },
+          { id: 'semi-auto-checkup', name: 'Foam Jet AC Service', price: 649, rating: 4.5, reviewCount: 173, duration: 60, image: `./images/3rd-img.webp`, includes: ['Restores cooling with deep foam and jet cleaning.', 'Best for ACs with dust buildup or weak airflow'] },
+
+        ]
+      },
+      {
+        id: 'washing-machine-installation', label: 'Gas refill',
+        image: `./images/gasfill.webp`,
+        packages: [
+          { id: 'wm-installation', name: 'Gas Refill & Check-up', price: 2649, rating: 4.6, reviewCount: 350, duration: 60, image: `./images/gass-cover.webp`, includes: ['AC gas refill for instant cooling', 'Fix leaks. Refill gas. Cool better.'] },
+        ]
+      },
+      {
+        id: 'washing-machine-uninstallation', label: 'Installation & Uninstallation',
+        image: `./images/install-uni.webp`,
+        packages: [
+          { id: 'ac-installation', name: 'AC Installation', price: 1069, rating: 4.5, reviewCount: 335, duration: 60, image: `./images/2nd-img.webp`, includes: ['Quick, safe AC installation for optimal cooling', 'Secure setup with final performance check.'] },
+          { id: 'ac-uninstallation', name: 'AC Uninstallation', price: 599, rating: 4.5, reviewCount: 335, duration: 60, image: `./images/6-img.webp`, includes: ['Quick & safe AC uninstallation by experts.', 'Clean removal with secure disconnections.'] },
+
+        ]
+      },
+      {
+        id: 'saver-pack', label: 'Saver pack',
+        image: `./images/saverpackage.webp`,
+        packages: [
+          { id: 'foam-2-ac', name: 'Foam Jet AC Services (2 ACs)', price: 1122, rating: 4.5, reviewCount: 335, duration: 150, image: `./images/3rd-img.webp`, includes: ['Restores cooling with deep foam and jet cleaning.', 'Best for ACs with dust buildup or weak airflow.'] },
+          { id: 'foam-3-ac', name: 'Foam Jet AC Services (3 ACs)', price: 1604, rating: 4.5, reviewCount: 335, duration: 150, image: `./images/3rd-img.webp`, includes: ['Restores cooling with deep foam and jet cleaning.', 'Best for ACs with dust buildup or weak airflow.'] },
+          { id: 'foam-4-ac', name: 'Foam Jet AC Services (4 ACs)', price: 1871, rating: 4.5, reviewCount: 335, duration: 150, image: `./images/3rd-img.webp`, includes: ['Restores cooling with deep foam and jet cleaning.', 'Best for ACs with dust buildup or weak airflow.'] },
+          { id: 'foam-5-ac', name: 'Foam Jet AC Services (5 ACs)', price: 2253, rating: 4.5, reviewCount: 335, duration: 150, image: `./images/3rd-img.webp`, includes: ['Restores cooling with deep foam and jet cleaning', 'Best for ACs with dust buildup or weak airflow.'] },
+        ]
+      },
+    ];
+
+    const reviews = [
+      { name: 'Ganesh', location: 'Indiranagar', stars: 5, date: 'Sep 2025', text: 'Service was very professional and polite. The technician was knowledgeable and fixed the issue quickly. Highly recommend Reliable Company for AC repairs.' },
+      { name: 'Bharath', location: 'Indiranagar', stars: 5, text: 'The technician arrived on time and was very professional. He diagnosed the problem quickly and had the AC running again in no time.' },
+      { name: 'Aravind', location: 'Whitefield', stars: 4, text: 'Excellent job by the technician. The AC was repaired efficiently and the service was affordable. Would definitely use Reliable Company again.' },
+      { name: 'Balaji', location: 'Whitefield', stars: 4, text: 'Service was reasonably priced and the technician was very knowledgeable. Fixed the issue in under an hour. Good overall experience.' },
+      { name: 'Vijay', location: 'Whitefield', stars: 4, text: 'Good service overall. The technician was courteous and explained what was wrong with the machine before starting the repair.' },
+      { name: 'Subramani', location: 'Malleshwaram', stars: 4, text: 'Reliable service at a fair price. The technician came well-equipped and resolved the fault efficiently.' },
+      { name: 'Sivakumar', location: 'Indiranagar', stars: 4, text: 'Excellent job by the repair team. The AC is working perfectly now. I am satisfied with the service.' },
+      { name: 'Thiyagu', location: 'Malleshwaram', stars: 4, text: 'Good communication from the team. Technician arrived on time and completed the job neatly without any mess.' },
+      { name: 'Varun', location: 'Whitefield', stars: 4, text: 'Prompt response and quick service. The technician was well-trained and professional throughout the visit.' },
+      { name: 'Meena', location: 'Indiranagar', stars: 4, text: 'Excellent job. The technician was polite and fixed the problem in a single visit. No issues since the repair.' },
+      { name: 'Suganya', location: 'Whitefield', stars: 4, text: 'I am happy with the repair. The team was prompt and the work was done cleanly. Would recommend to friends.' },
+      { name: 'Harini', location: 'Malleshwaram', stars: 4, text: 'Repair team showed professionalism throughout. Transparent about costs before starting the work. Great service.' },
+      { name: 'Bhavani', location: 'Malleshwaram', stars: 5, text: 'I am happy with the repair. Machine is working perfectly now. The technician was friendly and efficient.' },
+      { name: 'Manikandan', location: 'Koramangala', stars: 5, text: 'Excellent job! Technician was highly skilled, diagnosed the issue instantly, and the repair was done with quality spare parts.' },
+      { name: 'Ramesh', location: 'Whitefield', stars: 5, text: 'I am happy with the repair. The service was quick and the technician was very professional. Will use Reliable Company for future needs.' },
+    ];
+
+    const ratingBars = [
+      { stars: 5, percent: 72 },
+      { stars: 4, percent: 20 },
+      { stars: 3, percent: 1 },
+      { stars: 2, percent: 1 },
+      { stars: 1, percent: 5 },
+    ];
+
+    const faqs = [
+      { q: 'Do you use original spare parts for repairs?', a: 'Yes, we use genuine and high-quality spare parts for all repairs. All parts come with a guarantee to ensure the longevity of your appliance.' },
+      { q: 'Is there a service guarantee on repairs?', a: 'Absolutely. All repairs come with a 30-day service guarantee. If the same problem recurs within 30 days, we will fix it at no additional charge.' },
+      { q: 'Who arranges for spare parts if needed?', a: 'Our professional technicians will arrange for any spare parts required. Parts are billed separately and you will be informed of the cost before any replacements are made.' },
+      { q: 'Can I fix a blocked drain myself?', a: 'We strongly recommend seeking professional assistance for blocked drains rather than attempting a DIY fix. Improper handling can damage internal components and void warranties.' },
+    ];
+
+
+    // ===== STATE =====
+    let activeCategory = serviceCategories[0].id;
+    let selectedPackages = [];
+
+    // ===== HELPERS =====
+    function starsSVG(count, filled, size = 14) {
+      return Array.from({ length: count }).map((_, i) => {
+        const cls = i < filled ? 'star-filled' : 'star-empty';
+        return `<svg class="star-svg ${cls}" width="${size}" height="${size}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
+      }).join('');
+    }
+
+    function checkSVG(cls = '') {
+      return `<svg class="${cls}" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;
+    }
+
+    // ===== RENDER =====
+    function renderHeroStars() {
+      document.getElementById('hero-stars').innerHTML = starsSVG(5, 5, 14);
+      document.getElementById('reviews-stars').innerHTML = starsSVG(5, 5, 16);
+    }
+
+    function renderCategoryTabs() {
+      const el = document.getElementById('cat-tabs');
+      el.innerHTML = serviceCategories.map(cat => `
+    <button class="cat-tab${cat.id === activeCategory ? ' active' : ''}" data-cat="${cat.id}">
+      <img src="${cat.image}" alt="${cat.label}" onerror="this.style.background='#e5e7eb'" />
+      <span class="cat-tab-label">${cat.label}</span>
+    </button>
+  `).join('');
+      el.querySelectorAll('.cat-tab').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeCategory = btn.dataset.cat;
+          renderCategoryTabs();
+          renderPackages();
+        });
+      });
+    }
+
+    function renderPackages() {
+      const cat = serviceCategories.find(c => c.id === activeCategory);
+      document.getElementById('cat-heading').textContent = cat.label;
+      const el = document.getElementById('packages-list');
+      el.innerHTML = cat.packages.map(pkg => `
+      <article class="pkg-card">
+        <div class="pkg-card-top">
+          <img class="pkg-img" src="${pkg.image}" alt="${pkg.name}" onerror="this.style.background='#e5e7eb'" />
+          <div class="pkg-info">
+            <h3 class="pkg-name">${pkg.name}</h3>
+            <div class="pkg-meta">
+              <div class="stars">${starsSVG(5, Math.round(pkg.rating), 13)}</div>
+              <span class="pkg-rating">${pkg.rating}</span>
+              <span class="pkg-rcount">(${pkg.reviewCount})</span>
+            </div>
+            <div class="pkg-time">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              ${pkg.duration} mins
+            </div>
+            <div class="pkg-bottom-row">
+              <span class="pkg-price">₹${pkg.price}</span>
+              <button type="button" class="btn-add btn-whatsapp" data-service="${pkg.name}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Book now
+              </button>
+            </div>
+          </div>
+        </div>
+        ${pkg.includes.length ? `
+          <div class="pkg-includes">
+            <p>What's included:</p>
+            <ul>${pkg.includes.map(item => `<li>${checkSVG('check-icon')} ${item}</li>`).join('')}</ul>
+          </div>` : ''}
+      </article>`).join('');
+    }
+
+    function renderRatingBars() {
+      document.getElementById('rating-bars').innerHTML = ratingBars.map(b => `
+    <div class="rating-bar-row">
+      <div class="stars">${starsSVG(b.stars, b.stars, 12)}</div>
+      <div class="rating-bar-track"><div class="rating-bar-fill" style="width:${b.percent}%"></div></div>
+      <span class="rating-pct">${b.percent}%</span>
+    </div>`).join('');
+    }
+
+    function renderReviews() {
+      document.getElementById('reviews-grid').innerHTML = reviews.map(r => `
+    <article class="review-card">
+      <div class="review-head">
+        <div><p class="review-name">${r.name}</p><p class="review-loc">${r.location}</p></div>
+        ${r.date ? `<span class="review-date">${r.date}</span>` : ''}
+      </div>
+      <div class="stars">${starsSVG(5, r.stars, 13)}</div>
+      <p class="review-text">${r.text}</p>
+    </article>`).join('');
+    }
+
+    function renderFAQ() {
+      document.getElementById('faq-list').innerHTML = faqs.map(f => `
+    <details class="faq-item">
+      <summary><span class="faq-q">${f.q}</span><span class="faq-toggle">+</span></summary>
+      <p class="faq-answer">${f.a}</p>
+    </details>`).join('');
+    }
+
+    // Generate next 7 booking dates dynamically based on today's date.
+    // This keeps the schedule current without manual updates.
+    function getNext7BookingDates() {
+      const today = new Date();
+      return Array.from({ length: 7 }, (_, index) => {
+        const date = new Date(today);
+        date.setDate(today.getDate() + index);
+        return date.toLocaleDateString('en-US', {
+          weekday: 'short',
+          day: 'numeric',
+        });
+      });
+    }
+
+    let bookingDates = getNext7BookingDates();
+    const bookingTimes = [
+      '08:00 AM',
+      '09:00 AM',
+      '10:00 AM',
+      '11:00 AM',
+      '12:00 PM',
+      '01:00 PM',
+      '02:00 PM',
+      '03:00 PM',
+      '04:00 PM',
+      '05:00 PM',
+    ];
+    let bookingMode = 'instant';
+    let selectedDate = bookingDates[0];
+    let selectedTime = bookingTimes[2];
+    let selectedService = '';
+    let selectedIssue = '';
+
+    function renderBookingModal() {
+      document.getElementById('booking-service-name').textContent = selectedService || 'Select a service to start';
+      document.getElementById('booking-issue').value = selectedIssue;
+
+      document
+        .getElementById('booking-mode-options')
+        .querySelectorAll('button')
+        .forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.mode === bookingMode);
+        });
+
+      document.getElementById('booking-date-list').innerHTML = bookingDates
+        .map(
+          date => `
+          <button type="button" class="booking-pill${selectedDate === date ? ' active' : ''}" data-date="${date}">${date}</button>
+        `,
+        )
+        .join('');
+
+      document.getElementById('booking-time-list').innerHTML = bookingTimes
+        .map(
+          time => `
+          <button type="button" class="booking-pill${selectedTime === time ? ' active' : ''}" data-time="${time}">${time}</button>
+        `,
+        )
+        .join('');
+    }
+
+    function openBookingModal(service) {
+      selectedService = service;
+      bookingMode = 'instant';
+      bookingDates = getNext7BookingDates();
+      selectedDate = bookingDates[0];
+      selectedTime = bookingTimes[2];
+      selectedIssue = '';
+      renderBookingModal();
+      document.getElementById('booking-modal').classList.add('visible');
+      document.getElementById('booking-modal').setAttribute('aria-hidden', 'false');
+    }
+
+    function closeBookingModal() {
+      document.getElementById('booking-modal').classList.remove('visible');
+      document.getElementById('booking-modal').setAttribute('aria-hidden', 'true');
+    }
+
+    function sendBookingToWhatsApp() {
+      selectedIssue = document.getElementById('booking-issue').value.trim();
+      const details = [
+        `Service: ${selectedService}`,
+        `Preferred arrival: ${bookingMode === 'instant' ? 'Instant (30 mins)' : `${selectedDate} at ${selectedTime}`}`,
+        selectedIssue ? `Issue: ${selectedIssue}` : 'Issue: Not specified',
+      ].join('\n');
+      const text = `Hi Reliable Company, I would like to book ${selectedService}.\n${details}`;
+      const url = `https://wa.me/917075532295?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+      closeBookingModal();
+    }
+
+    document.addEventListener('click', event => {
+      const whatsappBtn = event.target.closest('.btn-whatsapp');
+      if (whatsappBtn) {
+        event.preventDefault();
+        openBookingModal(whatsappBtn.dataset.service || 'service');
+      }
+    });
+
+    document.getElementById('booking-modal').addEventListener('click', event => {
+      if (event.target.dataset.close === 'modal' || event.target.closest('.booking-close')) {
+        closeBookingModal();
+      }
+
+      const modeBtn = event.target.closest('[data-mode]');
+      if (modeBtn) {
+        bookingMode = modeBtn.dataset.mode;
+        renderBookingModal();
+      }
+
+      const dateBtn = event.target.closest('[data-date]');
+      if (dateBtn) {
+        selectedDate = dateBtn.dataset.date;
+        renderBookingModal();
+      }
+
+      const timeBtn = event.target.closest('[data-time]');
+      if (timeBtn) {
+        selectedTime = timeBtn.dataset.time;
+        renderBookingModal();
+      }
+
+      if (event.target.id === 'booking-submit') {
+        sendBookingToWhatsApp();
+      }
+    });
+
+    document.getElementById('booking-issue').addEventListener('input', event => {
+      selectedIssue = event.target.value;
+    });
+
+    // ===== FOOTER YEAR =====
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ===== INIT =====
+    renderHeroStars();
+    renderCategoryTabs();
+    renderPackages();
+    renderRatingBars();
+    renderReviews();
+    renderFAQ();
+  </script>
+
+</body>
+
+</html>

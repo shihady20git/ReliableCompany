@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refrigerator Repair & Services in Bangalore</title>
+    <link rel="icon" type="image/png" href="./images/logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="refrigerator-styles.css" />
+  </head>
+
+  <body>
+    <!-- ══════════════════ HEADER ══════════════════ -->
+    <header>
+      <nav>
+        <div style="display: flex; align-items: center; gap: 12px">
+          <button
+            onclick="history.back()"
+            style="
+              background: none;
+              border: none;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              gap: 4px;
+              padding: 8px 12px;
+              color: #374151;
+              font-weight: 600;
+              font-size: 13px;
+              border-radius: 8px;
+              transition: background 0.2s;
+            "
+            onmouseover="this.style.background = '#f3f4f6'"
+            onmouseout="this.style.background = 'none'"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.5"
+              style="width: 16px; height: 16px"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+            Back
+          </button>
+          <a
+            href="index.html"
+            class="navbar-logo"
+            style="display: flex; align-items: center"
+          >
+            <img
+              src="./images/logo.png"
+              alt="Reliable Company"
+              class="logo-img"
+            />
+            <span class="logo-name">Reliable Company</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ══════════════════ HERO ══════════════════ -->
+    <section class="hero">
+      <div class="hero-inner">
+        <!-- Location (desktop) -->
+        <div class="location-row">
+          <svg
+            class="location-pin"
+            width="16"
+            height="16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <div>
+            <div class="location-city"></div>
+            <div class="location-addr">
+              <svg
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Title -->
+        <h1>Refrigerator Repair &amp; Services in Bangalore</h1>
+
+        <!-- Rating -->
+        <div class="rating-row">
+          <div class="stars">
+            <!-- 4 full stars -->
+            <svg class="star full" viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+              />
+            </svg>
+            <svg class="star full" viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+              />
+            </svg>
+            <svg class="star full" viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+              />
+            </svg>
+            <svg class="star full" viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+              />
+            </svg>
+            <!-- half star -->
+            <svg class="star half" viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+              />
+            </svg>
+          </div>
+          <span class="rating-link">4.5 (2322 reviews)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ SERVICES ══════════════════ -->
+    <section class="services-section">
+      <div class="services-inner">
+        <!-- Banner image -->
+        <div class="banner">
+          <img
+            src="./images/fridge.webp"
+            alt="Refrigerator repair service"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Cards (full width — sidebar removed) -->
+        <div class="cards-grid" id="cards-grid">
+          <!-- Card: Refrigerator Check-up -->
+          <article class="service-card">
+            <div class="card-header">
+              <div>
+                <div class="card-name">Refrigerator Check-up</div>
+                <div class="card-price">₹299</div>
+              </div>
+
+              <button
+                type="button"
+                class="add-btn btn-whatsapp"
+                data-service="Refrigerator Check-up"
+              >
+                Book now
+              </button>
+            </div>
+
+            <div class="card-body">
+              <!-- Process -->
+              <div>
+                <div class="section-title">Our Process</div>
+                <ol class="process-list">
+                  <li class="process-item">
+                    <span class="step-num">1</span>
+                    <div>
+                      <div class="step-title">Inspection &amp; Estimate</div>
+                      <div class="step-desc">
+                        Checks and identifies issues, shares a repair cost
+                        estimate.
+                      </div>
+                    </div>
+                  </li>
+                  <li class="process-item">
+                    <span class="step-num">2</span>
+                    <div>
+                      <div class="step-title">
+                        Spare Parts Support (If Needed)
+                      </div>
+                      <div class="step-desc">
+                        Market-available parts sourced as required.
+                      </div>
+                    </div>
+                  </li>
+                  <li class="process-item">
+                    <span class="step-num">3</span>
+                    <div>
+                      <div class="step-title">Repair Work</div>
+                      <div class="step-desc">
+                        All identified issues are fixed.
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+
+              <hr class="divider" />
+
+              <!-- Issues -->
+              <div>
+                <div class="section-title">Common Issues We Fix</div>
+                <div class="issues-grid">
+                  <div class="issue-item">
+                    <svg
+                      class="check-icon"
+                      width="14"
+                      height="14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    Refrigerator not cooling
+                  </div>
+                  <div class="issue-item">
+                    <svg
+                      class="check-icon"
+                      width="14"
+                      height="14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    Water leakage
+                  </div>
+                  <div class="issue-item">
+                    <svg
+                      class="check-icon"
+                      width="14"
+                      height="14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    Excessive noise
+                  </div>
+                  <div class="issue-item">
+                    <svg
+                      class="check-icon"
+                      width="14"
+                      height="14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    Light not working
+                  </div>
+                  <div class="issue-item">
+                    <svg
+                      class="check-icon"
+                      width="14"
+                      height="14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    Water dispenser issues
+                  </div>
+                  <div class="issue-item">
+                    <svg
+                      class="check-icon"
+                      width="14"
+                      height="14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    Door alignment problems
+                  </div>
+                  <div class="issue-item">
+                    <svg
+                      class="check-icon"
+                      width="14"
+                      height="14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    Door handle repair/replacement
+                  </div>
+                  <div class="issue-item">
+                    <svg
+                      class="check-icon"
+                      width="14"
+                      height="14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    Ice maker issues
+                  </div>
+                  <div class="issue-item">
+                    <svg
+                      class="check-icon"
+                      width="14"
+                      height="14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    Defrosting problems
+                  </div>
+                  <div class="issue-item">
+                    <svg
+                      class="check-icon"
+                      width="14"
+                      height="14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    Door seal/gasket replacement
+                  </div>
+                  <div class="issue-item">
+                    <svg
+                      class="check-icon"
+                      width="14"
+                      height="14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    Gas refilling
+                  </div>
+                </div>
+              </div>
+
+              <hr class="divider" />
+
+              <!-- Not included -->
+              <div>
+                <div class="section-title">What's Not Included</div>
+                <div class="not-included">
+                  <div class="ni-item">
+                    <span class="dot"></span>Major structural modifications
+                  </div>
+                  <div class="ni-item">
+                    <span class="dot"></span>Complete refrigerator replacement
+                  </div>
+                  <div class="ni-item">
+                    <span class="dot"></span>Repair of non-serviceable or fully
+                    damaged components
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- /cards-grid -->
+      </div>
+    </section>
+
+    <!-- ══════════════════ FAQ ══════════════════ -->
+    <section class="faq-section">
+      <div class="faq-inner">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <div class="faq-list" id="faq-list">
+          <div class="faq-item">
+            <button class="faq-btn" onclick="toggleFAQ(this)">
+              <span class="faq-question"
+                >My refrigerator is under warranty. Would you still fix
+                it?</span
+              >
+              <svg
+                class="chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                We do undertake repair services for refrigerators under
+                warranty. Please confirm that your refrigerator is under
+                warranty before the service expert arrives.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" onclick="toggleFAQ(this)">
+              <span class="faq-question"
+                >What kind of refrigerator repair service do you provide?</span
+              >
+              <svg
+                class="chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Reliable services has certified technicians who offer repair and
+                maintenance services for refrigerators of all brands, including
+                Samsung, LG, Whirlpool, and Haier, in both residential and
+                commercial settings. Our service experts are equipped to handle
+                refrigerators of any size and provide a guaranteed solution.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" onclick="toggleFAQ(this)">
+              <span class="faq-question"
+                >Do you do refrigerator repairs for Samsung refrigerators?</span
+              >
+              <svg
+                class="chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, Reliable does provide all kinds of repairs and services for
+                refrigerators of all main manufacturers like Samsung, Onida,
+                Whirlpool, LG, Godrej, Panasonic, and Bosch.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" onclick="toggleFAQ(this)">
+              <span class="faq-question"
+                >What is the cost of refrigerator repair?</span
+              >
+              <svg
+                class="chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                After the professional identifies the issue with the
+                refrigerator, they will provide you with the recommended service
+                and a final quote. You have the option to either accept or
+                decline the service. If you only opt for inspection, there will
+                be a charge of Rs 149 for the inspection.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" onclick="toggleFAQ(this)">
+              <span class="faq-question"
+                >Why is my refrigerator leaking water?</span
+              >
+              <svg
+                class="chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                A leaking refrigerator can be a cause for concern. Possible
+                causes include: A clogged or frozen defrost drain, leaks in the
+                water tank assembly, or a cracked or poorly fitted water inlet
+                valve.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" onclick="toggleFAQ(this)">
+              <span class="faq-question"
+                >Why is my refrigerator not cooling?</span
+              >
+              <svg
+                class="chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                If your refrigerator is not cooling, it may be due to: Issues
+                with the condenser coils or the door, malfunction of the
+                condenser fan motor, or malfunction of the evaporator fan motor.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" onclick="toggleFAQ(this)">
+              <span class="faq-question"
+                >Why is there excessive noise coming from my refrigerator?</span
+              >
+              <svg
+                class="chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Some refrigerators may start to make more noise if there is an
+                issue. The following problems can cause excessive noise: The
+                evaporator or condenser fan blade may be to blame, the
+                evaporator fan motor fails, or a malfunctioning condenser fan
+                motor.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" onclick="toggleFAQ(this)">
+              <span class="faq-question"
+                >Which is the best refrigerator repair service near me?</span
+              >
+              <svg
+                class="chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Reliable has an extensive database of the best refrigerator
+                service in your area. Booking a service with us is easy and
+                simple. All our technicians are certified, trained, and
+                experienced. Apart from that, all of them undergo strict
+                background checks to ensure the safety of you and your home.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img
+                src="./images/logo.png"
+                alt="Reliable Company"
+                class="footer-logo-img"
+              />
+              <span class="footer-logo-name">Reliable Company</span>
+            </div>
+            <p class="footer-desc">
+              Your trusted local home services partner in Bangalore, connecting
+              homeowners with verified professionals.
+            </p>
+            <p class="footer-address">
+              <strong>SM Plaza,</strong> No. 18 2nd Cross SH Layout AMC Main
+              Road,<br />
+              1st Cross Rd, near SSR Function Hall,<br />
+              POST KAVARASANDRA, RT Nagar, Shampura,<br />
+              Kaval Bairasandra, Bengaluru,<br />
+              Karnataka 560032
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-col-title">Reliable Company</h3>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copy">
+            &copy; <span id="year"></span> Reliable Company. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ══════════════════ BOOKING MODAL ══════════════════ -->
+    <div id="booking-modal" class="booking-modal" aria-hidden="true">
+      <div class="booking-backdrop" data-close="modal"></div>
+      <div
+        class="booking-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="booking-title"
+      >
+        <div class="booking-header">
+          <div>
+            <p class="booking-pretitle">When should the professional arrive?</p>
+            <h2 id="booking-title">Book your service</h2>
+            <p class="booking-subtitle" id="booking-service-name">
+              Select a service to start
+            </p>
+          </div>
+          <button
+            type="button"
+            class="booking-close"
+            data-close="modal"
+            aria-label="Close booking form"
+          >
+            ×
+          </button>
+        </div>
+
+        <div class="booking-card">
+          <div class="booking-option-row" id="booking-mode-options">
+            <button
+              type="button"
+              class="booking-option active"
+              data-mode="instant"
+            >
+              <strong>Instant</strong>
+              <span>In 30 mins (subject to availability)</span>
+            </button>
+            <button type="button" class="booking-option" data-mode="schedule">
+              <strong>Schedule for later</strong>
+              <span>Select your preferred day & time</span>
+            </button>
+          </div>
+
+          <div class="booking-section">
+            <p class="booking-label">Select date</p>
+            <div class="booking-pill-group" id="booking-date-list"></div>
+          </div>
+
+          <div class="booking-section">
+            <p class="booking-label">Select start time of service</p>
+            <div class="booking-pill-group" id="booking-time-list"></div>
+          </div>
+
+          <div class="booking-section">
+            <p class="booking-label">Describe the issue</p>
+            <textarea
+              id="booking-issue"
+              class="booking-textarea"
+              placeholder="e.g. Refrigerator not cooling"
+            ></textarea>
+          </div>
+
+          <button type="button" id="booking-submit" class="btn-whatsapp-action">
+            Continue to WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════ JAVASCRIPT ══════════════════ -->
+    <script>
+      // ── BOOKING MODAL ──────────────────────────────
+      // Generate next 7 booking dates dynamically based on today's date.
+      // This keeps the schedule current without manual updates.
+      function getNext7BookingDates() {
+        const today = new Date();
+        return Array.from({ length: 7 }, (_, index) => {
+          const date = new Date(today);
+          date.setDate(today.getDate() + index);
+          return date.toLocaleDateString("en-US", {
+            weekday: "short",
+            day: "numeric",
+          });
+        });
+      }
+
+      let bookingDates = getNext7BookingDates();
+      const bookingTimes = [
+        "08:00 AM",
+        "09:00 AM",
+        "10:00 AM",
+        "11:00 AM",
+        "12:00 PM",
+        "01:00 PM",
+        "02:00 PM",
+        "03:00 PM",
+        "04:00 PM",
+        "05:00 PM",
+      ];
+      let bookingMode = "instant";
+      let selectedDate = bookingDates[0];
+      let selectedTime = bookingTimes[2];
+      let selectedService = "";
+      let selectedIssue = "";
+
+      function renderBookingModal() {
+        document.getElementById("booking-service-name").textContent =
+          selectedService || "Select a service to start";
+        document.getElementById("booking-issue").value = selectedIssue;
+
+        document
+          .getElementById("booking-mode-options")
+          .querySelectorAll("button")
+          .forEach((btn) => {
+            btn.classList.toggle("active", btn.dataset.mode === bookingMode);
+          });
+
+        document.getElementById("booking-date-list").innerHTML = bookingDates
+          .map(
+            (date) => `
+          <button type="button" class="booking-pill${selectedDate === date ? " active" : ""}" data-date="${date}">${date}</button>
+        `,
+          )
+          .join("");
+
+        // The active pill state is controlled here so only one date appears selected.
+
+        document.getElementById("booking-time-list").innerHTML = bookingTimes
+          .map(
+            (time) => `
+          <button type="button" class="booking-pill${selectedTime === time ? " active" : ""}" data-time="${time}">${time}</button>
+        `,
+          )
+          .join("");
+      }
+
+      function openBookingModal(service) {
+        selectedService = service;
+        bookingMode = "instant";
+        bookingDates = getNext7BookingDates();
+        selectedDate = bookingDates[0];
+        selectedTime = bookingTimes[2];
+        selectedIssue = "";
+        renderBookingModal();
+        document.getElementById("booking-modal").classList.add("visible");
+        document
+          .getElementById("booking-modal")
+          .setAttribute("aria-hidden", "false");
+      }
+
+      function closeBookingModal() {
+        document.getElementById("booking-modal").classList.remove("visible");
+        document
+          .getElementById("booking-modal")
+          .setAttribute("aria-hidden", "true");
+      }
+
+      function sendBookingToWhatsApp() {
+        selectedIssue = document.getElementById("booking-issue").value.trim();
+        const details = [
+          `Service: ${selectedService}`,
+          `Preferred arrival: ${bookingMode === "instant" ? "Instant (30 mins)" : `${selectedDate} at ${selectedTime}`}`,
+          selectedIssue ? `Issue: ${selectedIssue}` : "Issue: Not specified",
+        ].join("\\n");
+        const text = `Hi Reliable Company, I would like to book ${selectedService}.\\n${details}`;
+        const url = `https://wa.me/917075532295?text=${encodeURIComponent(text)}`;
+        window.open(url, "_blank");
+        closeBookingModal();
+      }
+
+      document.addEventListener("click", (event) => {
+        const whatsappBtn = event.target.closest(".btn-whatsapp");
+        if (whatsappBtn) {
+          event.preventDefault();
+          openBookingModal(whatsappBtn.dataset.service || "service");
+        }
+      });
+
+      document
+        .getElementById("booking-modal")
+        .addEventListener("click", (event) => {
+          if (
+            event.target === event.currentTarget ||
+            event.target.dataset.close === "modal"
+          ) {
+            closeBookingModal();
+          }
+          if (event.target.closest("#booking-mode-options button")) {
+            bookingMode = event.target.closest("#booking-mode-options button")
+              .dataset.mode;
+            renderBookingModal();
+          }
+          if (event.target.dataset.date) {
+            selectedDate = event.target.dataset.date;
+            renderBookingModal();
+          }
+          if (event.target.dataset.time) {
+            selectedTime = event.target.dataset.time;
+            renderBookingModal();
+          }
+          if (event.target.id === "booking-submit") {
+            sendBookingToWhatsApp();
+          }
+        });
+
+      document
+        .getElementById("booking-issue")
+        .addEventListener("input", (event) => {
+          selectedIssue = event.target.value;
+        });
+
+      // ── FAQ accordion ──────────────────────────────
+      function toggleFAQ(btn) {
+        const answer = btn.nextElementSibling;
+        const chevron = btn.querySelector(".chevron");
+        const isOpen = answer.classList.contains("open");
+
+        // Close all
+        document
+          .querySelectorAll(".faq-answer")
+          .forEach((a) => a.classList.remove("open"));
+        document
+          .querySelectorAll(".chevron")
+          .forEach((c) => c.classList.remove("open"));
+
+        // Open clicked if it was closed
+        if (!isOpen) {
+          answer.classList.add("open");
+          chevron.classList.add("open");
+        }
+      }
+
+      // Fix footer brand col on md+ (span only applies on mobile in our grid)
+      (function () {
+        const brandCol = document.querySelector(".brand-col");
+        function fixBrand() {
+          if (window.innerWidth >= 768) {
+            brandCol.style.gridColumn = "1";
+          } else {
+            brandCol.style.gridColumn = "span 2";
+          }
+        }
+        fixBrand();
+        window.addEventListener("resize", fixBrand);
+      })();
+    </script>
+  </body>
+</html>
