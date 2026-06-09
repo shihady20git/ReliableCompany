@@ -7,6 +7,15 @@
     <link rel="icon" type="image/png" href="./images/logo.png" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="refrigerator-styles.css" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18098541445"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18098541445');
+    </script>
   </head>
 
   <body>
@@ -664,216 +673,20 @@
       </div>
     </footer>
 
-    <!-- ══════════════════ BOOKING MODAL ══════════════════ -->
-    <div id="booking-modal" class="booking-modal" aria-hidden="true">
-      <div class="booking-backdrop" data-close="modal"></div>
-      <div
-        class="booking-panel"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="booking-title"
-      >
-        <div class="booking-header">
-          <div>
-            <p class="booking-pretitle">When should the professional arrive?</p>
-            <h2 id="booking-title">Book your service</h2>
-            <p class="booking-subtitle" id="booking-service-name">
-              Select a service to start
-            </p>
-          </div>
-          <button
-            type="button"
-            class="booking-close"
-            data-close="modal"
-            aria-label="Close booking form"
-          >
-            ×
-          </button>
-        </div>
 
-        <div class="booking-card">
-          <div class="booking-option-row" id="booking-mode-options">
-            <button
-              type="button"
-              class="booking-option active"
-              data-mode="instant"
-            >
-              <strong>Instant</strong>
-              <span>In 30 mins (subject to availability)</span>
-            </button>
-            <button type="button" class="booking-option" data-mode="schedule">
-              <strong>Schedule for later</strong>
-              <span>Select your preferred day & time</span>
-            </button>
-          </div>
-
-          <div class="booking-section">
-            <p class="booking-label">Select date</p>
-            <div class="booking-pill-group" id="booking-date-list"></div>
-          </div>
-
-          <div class="booking-section">
-            <p class="booking-label">Select start time of service</p>
-            <div class="booking-pill-group" id="booking-time-list"></div>
-          </div>
-
-          <div class="booking-section">
-            <p class="booking-label">Describe the issue</p>
-            <textarea
-              id="booking-issue"
-              class="booking-textarea"
-              placeholder="e.g. Refrigerator not cooling"
-            ></textarea>
-          </div>
-
-          <button type="button" id="booking-submit" class="btn-whatsapp-action">
-            Continue to WhatsApp
-          </button>
-        </div>
-      </div>
-    </div>
 
     <!-- ══════════════════ JAVASCRIPT ══════════════════ -->
     <script>
-      // ── BOOKING MODAL ──────────────────────────────
-      // Generate next 7 booking dates dynamically based on today's date.
-      // This keeps the schedule current without manual updates.
-      function getNext7BookingDates() {
-        const today = new Date();
-        return Array.from({ length: 7 }, (_, index) => {
-          const date = new Date(today);
-          date.setDate(today.getDate() + index);
-          return date.toLocaleDateString("en-US", {
-            weekday: "short",
-            day: "numeric",
-          });
-        });
-      }
-
-      let bookingDates = getNext7BookingDates();
-      const bookingTimes = [
-        "08:00 AM",
-        "09:00 AM",
-        "10:00 AM",
-        "11:00 AM",
-        "12:00 PM",
-        "01:00 PM",
-        "02:00 PM",
-        "03:00 PM",
-        "04:00 PM",
-        "05:00 PM",
-      ];
-      let bookingMode = "instant";
-      let selectedDate = bookingDates[0];
-      let selectedTime = bookingTimes[2];
-      let selectedService = "";
-      let selectedIssue = "";
-
-      function renderBookingModal() {
-        document.getElementById("booking-service-name").textContent =
-          selectedService || "Select a service to start";
-        document.getElementById("booking-issue").value = selectedIssue;
-
-        document
-          .getElementById("booking-mode-options")
-          .querySelectorAll("button")
-          .forEach((btn) => {
-            btn.classList.toggle("active", btn.dataset.mode === bookingMode);
-          });
-
-        document.getElementById("booking-date-list").innerHTML = bookingDates
-          .map(
-            (date) => `
-          <button type="button" class="booking-pill${selectedDate === date ? " active" : ""}" data-date="${date}">${date}</button>
-        `,
-          )
-          .join("");
-
-        // The active pill state is controlled here so only one date appears selected.
-
-        document.getElementById("booking-time-list").innerHTML = bookingTimes
-          .map(
-            (time) => `
-          <button type="button" class="booking-pill${selectedTime === time ? " active" : ""}" data-time="${time}">${time}</button>
-        `,
-          )
-          .join("");
-      }
-
-      function openBookingModal(service) {
-        selectedService = service;
-        bookingMode = "instant";
-        bookingDates = getNext7BookingDates();
-        selectedDate = bookingDates[0];
-        selectedTime = bookingTimes[2];
-        selectedIssue = "";
-        renderBookingModal();
-        document.getElementById("booking-modal").classList.add("visible");
-        document
-          .getElementById("booking-modal")
-          .setAttribute("aria-hidden", "false");
-      }
-
-      function closeBookingModal() {
-        document.getElementById("booking-modal").classList.remove("visible");
-        document
-          .getElementById("booking-modal")
-          .setAttribute("aria-hidden", "true");
-      }
-
-      function sendBookingToWhatsApp() {
-        selectedIssue = document.getElementById("booking-issue").value.trim();
-        const details = [
-          `Service: ${selectedService}`,
-          `Preferred arrival: ${bookingMode === "instant" ? "Instant (30 mins)" : `${selectedDate} at ${selectedTime}`}`,
-          selectedIssue ? `Issue: ${selectedIssue}` : "Issue: Not specified",
-        ].join("\\n");
-        const text = `Hi Reliable Company, I would like to book ${selectedService}.\\n${details}`;
-        const url = `https://wa.me/917075532295?text=${encodeURIComponent(text)}`;
-        window.open(url, "_blank");
-        closeBookingModal();
-      }
-
       document.addEventListener("click", (event) => {
         const whatsappBtn = event.target.closest(".btn-whatsapp");
         if (whatsappBtn) {
           event.preventDefault();
-          openBookingModal(whatsappBtn.dataset.service || "service");
+          const service = whatsappBtn.dataset.service || "service";
+          const text = `Hi Reliable Company, I would like to book the service: ${service}.`;
+          const url = `https://wa.me/917075532295?text=${encodeURIComponent(text)}`;
+          window.open(url, "_blank");
         }
       });
-
-      document
-        .getElementById("booking-modal")
-        .addEventListener("click", (event) => {
-          if (
-            event.target === event.currentTarget ||
-            event.target.dataset.close === "modal"
-          ) {
-            closeBookingModal();
-          }
-          if (event.target.closest("#booking-mode-options button")) {
-            bookingMode = event.target.closest("#booking-mode-options button")
-              .dataset.mode;
-            renderBookingModal();
-          }
-          if (event.target.dataset.date) {
-            selectedDate = event.target.dataset.date;
-            renderBookingModal();
-          }
-          if (event.target.dataset.time) {
-            selectedTime = event.target.dataset.time;
-            renderBookingModal();
-          }
-          if (event.target.id === "booking-submit") {
-            sendBookingToWhatsApp();
-          }
-        });
-
-      document
-        .getElementById("booking-issue")
-        .addEventListener("input", (event) => {
-          selectedIssue = event.target.value;
-        });
 
       // ── FAQ accordion ──────────────────────────────
       function toggleFAQ(btn) {
